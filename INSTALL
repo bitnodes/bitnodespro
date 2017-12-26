@@ -1,0 +1,16 @@
+Building BitNodes
+
+Use the autogen script to prepare the build environment.
+
+    ./autogen.sh
+    ./configure
+    make
+
+Precompiled binaries are available at github, see
+https://github.com/bitnodes/bitnodes
+
+Always verify the signatures and checksums.
+
+See doc/build-*.md for instructions on building bitnodesd,
+the intended-for-services, no-graphical-interface, reference
+implementation of BitNodes.
