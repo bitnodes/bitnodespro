@@ -78,7 +78,7 @@ public:
         pchMessageStart[2] = 0x6b;
         pchMessageStart[3] = 0xbd;
         vAlertPubKey = ParseHex("0466b6916465661ad39d2bc298058b9229fc34e50b87532bbf580c282bcba78b2e8b8d99897121e2fef51c2274bb57fffc172fab75171d2ca82c91feaf60efe1e0");
-        nDefaultPort = 7227;
+        nDefaultPort = 2632;
         bnProofOfWorkLimit = ~uint256(0) >> 20;  // BitNodesPro starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 21600;
         nEnforceBlockUpgradeMajority = 750;
@@ -155,7 +155,7 @@ public:
         pchMessageStart[2] = 0xca;
         pchMessageStart[3] = 0xff;
         vAlertPubKey = ParseHex("04faa632781a7673b5c7057419bbf5263d474663cbc28f37682d6775f5d4e56d05ce68e5b385a57b042e5a02b15bba922c3e7217ebf199e0583ac3760b444243ba");
-        nDefaultPort = 17779;
+        nDefaultPort = 17732;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -226,7 +226,7 @@ public:
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 1;
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 17774;
+        nDefaultPort = 17632;
         assert(hashGenesisBlock == uint256("0x739b1fa116eb3952141850e937526fcb4951da3bd9dcf3d34d1d9e87bcd3096b"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.

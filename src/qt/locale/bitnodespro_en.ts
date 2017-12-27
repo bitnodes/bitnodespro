@@ -4768,8 +4768,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BitNodesPro Alert&quot; admin@
     </message>
     <message>
         <location line="+6"/>
-        <source>(7227 could be used only on mainnet)</source>
-        <translation>(7227 could be used only on mainnet)</translation>
+        <source>(2632 could be used only on mainnet)</source>
+        <translation>(2632 could be used only on mainnet)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5290,8 +5290,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BitNodesPro Alert&quot; admin@
     </message>
     <message>
         <location line="-88"/>
-        <source>(must be 7227 for mainnet)</source>
-        <translation>(must be 7227 for mainnet)</translation>
+        <source>(must be 2632 for mainnet)</source>
+        <translation>(must be 2632 for mainnet)</translation>
     </message>
     <message>
         <location line="+13"/>

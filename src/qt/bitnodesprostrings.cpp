@@ -205,10 +205,10 @@ QT_TRANSLATE_NOOP("bitnodespro-core", ""
 QT_TRANSLATE_NOOP("bitnodespro-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("bitnodespro-core", "(7227 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("bitnodespro-core", "(2632 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("bitnodespro-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("bitnodespro-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("bitnodespro-core", "(must be 7227 for mainnet)"),
+QT_TRANSLATE_NOOP("bitnodespro-core", "(must be 2632 for mainnet)"),
 QT_TRANSLATE_NOOP("bitnodespro-core", "<category> can be:\n"),
 QT_TRANSLATE_NOOP("bitnodespro-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("bitnodespro-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

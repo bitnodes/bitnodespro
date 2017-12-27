@@ -52,11 +52,11 @@ reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equiv
 config file):
 
 	HiddenServiceDir /var/lib/tor/bitnodespro-service/
-	HiddenServicePort 7227 127.0.0.1:7227
-	HiddenServicePort 17779 127.0.0.1:17779
+	HiddenServicePort 2632 127.0.0.1:2632
+	HiddenServicePort 17732 127.0.0.1:17732
 
 The directory can be different of course, but (both) port numbers should be equal to
-your bitnodesprod's P2P listen port (7227 by default).
+your bitnodesprod's P2P listen port (2632 by default).
 
 	-externalip=X   You can tell bitnodespro about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
@@ -86,7 +86,7 @@ specify:
 
 	./bitnodesprod ... -discover
 
-and open port 7227 on your firewall (or use -upnp).
+and open port 2632 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:

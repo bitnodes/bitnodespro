@@ -1,15 +1,15 @@
 BitNodesPro Core staging tree
-===============================
+=============================
 
 Copyright (c) 2009-2017 Bitcoin Core Developers
 
 Copyright (c) 2014-2017 Dash Core Developers
 
-Copyright (c) 2017 BitNodesPro Core Developers
+Copyright (c) 2017-2018 BitNodes Project Developers
 
 
 What is BitNodesPro?
-----------------
+--------------------
 
 BitNodesPro is an experimental digital currency that enables anonymous, instant
 payments to anyone, anywhere in the world. BitNodesPro uses peer-to-peer technology
