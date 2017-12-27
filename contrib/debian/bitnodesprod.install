@@ -1,2 +1,2 @@
-usr/local/bin/bitnodesd usr/bin
-usr/local/bin/bitnodes-cli usr/bin
+usr/local/bin/bitnodesprod usr/bin
+usr/local/bin/bitnodespro-cli usr/bin

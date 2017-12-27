@@ -31,9 +31,9 @@ Value mnbudget(const Array& params, bool fHelp)
                 "\nAvailable commands:\n"
                 "  prepare            - Prepare proposal for network by signing and creating tx\n"
                 "  submit             - Submit proposal for network\n"
-                "  vote-many          - Vote on a BitNodes initiative\n"
-                "  vote-alias         - Vote on a BitNodes initiative\n"
-                "  vote               - Vote on a BitNodes initiative/budget\n"
+                "  vote-many          - Vote on a BitNodesPro initiative\n"
+                "  vote-alias         - Vote on a BitNodesPro initiative\n"
+                "  vote               - Vote on a BitNodesPro initiative/budget\n"
                 "  getvotes           - Show current masternode budgets\n"
                 "  getinfo            - Show current masternode budgets\n"
                 "  show               - Show all budgets\n"
@@ -60,7 +60,7 @@ Value mnbudget(const Array& params, bool fHelp)
         mnEntries = masternodeConfig.getEntries();
 
         if (params.size() != 7)
-            throw runtime_error("Correct usage is 'mnbudget prepare proposal-name url payment_count block_start bitnodes_address monthly_payment_bitnodes'");
+            throw runtime_error("Correct usage is 'mnbudget prepare proposal-name url payment_count block_start bitnodespro_address monthly_payment_bitnodespro'");
 
         std::string strProposalName = params[1].get_str();
         if(strProposalName.size() > 20)
@@ -93,9 +93,9 @@ Value mnbudget(const Array& params, bool fHelp)
 
         CBitcoinAddress address(params[5].get_str());
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitNodes address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitNodesPro address");
 
-        // Parse BitNodes address
+        // Parse BitNodesPro address
         CScript scriptPubKey = GetScriptForDestination(address.Get());
         CAmount nAmount = AmountFromValue(params[6]);
 
@@ -137,7 +137,7 @@ Value mnbudget(const Array& params, bool fHelp)
         mnEntries = masternodeConfig.getEntries();
 
         if (params.size() != 8)
-            throw runtime_error("Correct usage is 'mnbudget submit proposal-name url payment_count block_start bitnodes_address monthly_payment_bitnodes fee_tx'");
+            throw runtime_error("Correct usage is 'mnbudget submit proposal-name url payment_count block_start bitnodespro_address monthly_payment_bitnodespro fee_tx'");
 
         // Check these inputs the same way we check the vote commands:
         // **********************************************************
@@ -173,9 +173,9 @@ Value mnbudget(const Array& params, bool fHelp)
 
         CBitcoinAddress address(params[5].get_str());
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitNodes address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitNodesPro address");
 
-        // Parse BitNodes address
+        // Parse BitNodesPro address
         CScript scriptPubKey = GetScriptForDestination(address.Get());
         CAmount nAmount = AmountFromValue(params[6]);
         uint256 hash = ParseHashV(params[7], "parameter 1");

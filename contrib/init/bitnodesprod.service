@@ -1,15 +1,15 @@
 [Unit]
-Description=BitNodes's distributed currency daemon
+Description=BitNodesPro's distributed currency daemon
 After=network.target
 
 [Service]
-User=bitnodes
-Group=bitnodes
+User=bitnodespro
+Group=bitnodespro
 
 Type=forking
-PIDFile=/var/lib/bitnodesd/bitnodesd.pid
-ExecStart=/usr/bin/bitnodesd -daemon -pid=/var/lib/bitnodesd/bitnodesd.pid \
--conf=/etc/bitnodes/bitnodes.conf -datadir=/var/lib/bitnodesd -disablewallet
+PIDFile=/var/lib/bitnodesprod/bitnodesprod.pid
+ExecStart=/usr/bin/bitnodesprod -daemon -pid=/var/lib/bitnodesprod/bitnodesprod.pid \
+-conf=/etc/bitnodespro/bitnodespro.conf -datadir=/var/lib/bitnodesprod -disablewallet
 
 Restart=always
 PrivateTmp=true

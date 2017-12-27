@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.bitnodes.BitNodes-Qt";
+        return @"io.bitnodespro.BitNodesPro-Qt";
     } else {
         return [self __bundleIdentifier];
     }

@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2017 The Dash developers
-// Copyright (c) 2017 The BitNodes developers
+// Copyright (c) 2017 The BitNodesPro developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -79,14 +79,14 @@ public:
         pchMessageStart[3] = 0xbd;
         vAlertPubKey = ParseHex("0466b6916465661ad39d2bc298058b9229fc34e50b87532bbf580c282bcba78b2e8b8d99897121e2fef51c2274bb57fffc172fab75171d2ca82c91feaf60efe1e0");
         nDefaultPort = 7227;
-        bnProofOfWorkLimit = ~uint256(0) >> 20;  // BitNodes starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 20;  // BitNodesPro starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 21600;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 24 * 60 * 60; // BitNodes: 1 day
-        nTargetSpacing = 2 * 60; // BitNodes: 2 minutes
+        nTargetTimespan = 24 * 60 * 60; // BitNodesPro: 1 day
+        nTargetSpacing = 2 * 60; // BitNodesPro: 2 minutes
 
 
         const char* pszTimestamp = "The Beatles. I Want to Hold Your Hand 12/26/2017@9/00am UTC";
@@ -111,12 +111,12 @@ public:
 
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of(53);                     // BitNodes addresses start with 'N'
-        base58Prefixes[SCRIPT_ADDRESS] = list_of(0);                      // BitNodes script addresses start with '1'
-        base58Prefixes[SECRET_KEY]     = list_of(128);                    // BitNodes private keys start with '5'
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E); // BitNodes BIP32 pubkeys start with 'xpub'
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4); // BitNodes BIP32 prvkeys start with 'xprv'
-        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x8000002D);             // BitNodes BIP44 coin type is '45'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of(53);                     // BitNodesPro addresses start with 'N'
+        base58Prefixes[SCRIPT_ADDRESS] = list_of(0);                      // BitNodesPro script addresses start with '1'
+        base58Prefixes[SECRET_KEY]     = list_of(128);                    // BitNodesPro private keys start with '5'
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E); // BitNodesPro BIP32 pubkeys start with 'xpub'
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4); // BitNodesPro BIP32 prvkeys start with 'xprv'
+        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x8000002D);             // BitNodesPro BIP44 coin type is '45'
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
@@ -160,8 +160,8 @@ public:
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 24 * 60 * 60; // BitNodes: 1 day
-        nTargetSpacing = 2 * 60; // BitNodes: 2 minutes
+        nTargetTimespan = 24 * 60 * 60; // BitNodesPro: 1 day
+        nTargetSpacing = 2 * 60; // BitNodesPro: 2 minutes
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1517443200;
@@ -173,12 +173,12 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of(53);                     // Testnet BitNodes addresses start with 'N'
-        base58Prefixes[SCRIPT_ADDRESS] = list_of(0);                      // Testnet BitNodes script addresses start with '1'
-        base58Prefixes[SECRET_KEY]     = list_of(128);                    // Testnet BitNodes private keys start with '5'
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x35)(0x87)(0xCF); // Testnet BitNodes BIP32 pubkeys start with 'tpub'
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x35)(0x83)(0x94); // Testnet BitNodes BIP32 prvkeys start with 'tprv'
-        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000001);             // Testnet BitNodes BIP44 coin type is '1'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of(53);                     // Testnet BitNodesPro addresses start with 'N'
+        base58Prefixes[SCRIPT_ADDRESS] = list_of(0);                      // Testnet BitNodesPro script addresses start with '1'
+        base58Prefixes[SECRET_KEY]     = list_of(128);                    // Testnet BitNodesPro private keys start with '5'
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x35)(0x87)(0xCF); // Testnet BitNodesPro BIP32 pubkeys start with 'tpub'
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x35)(0x83)(0x94); // Testnet BitNodesPro BIP32 prvkeys start with 'tprv'
+        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000001);             // Testnet BitNodesPro BIP44 coin type is '1'
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
@@ -219,8 +219,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // BitNodes: 1 day
-        nTargetSpacing = 2 * 60; // BitNodes: 2 minutes
+        nTargetTimespan = 24 * 60 * 60; // BitNodesPro: 1 day
+        nTargetSpacing = 2 * 60; // BitNodesPro: 2 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1518566400;
         genesis.nBits = 0x207fffff;

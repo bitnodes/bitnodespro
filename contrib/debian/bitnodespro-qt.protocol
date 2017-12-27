@@ -1,6 +1,6 @@
 [Protocol]
-exec=bitnodes-qt '%u'
-protocol=bitnodes
+exec=bitnodespro-qt '%u'
+protocol=bitnodespro
 input=none
 output=none
 helper=true

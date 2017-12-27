@@ -7,7 +7,7 @@
 #include "masternodeconfig.h"
 
 //
-// Bootup the Masternode, look for a 1000NODE input and register on the network
+// Bootup the Masternode, look for a 1000XNODE input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {    

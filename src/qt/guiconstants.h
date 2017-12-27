@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2017 The Dash developers
-// Copyright (c) 2017 The BitNodes developers
+// Copyright (c) 2017 The BitNodesPro developers
 // Distributed under the MIT/X15 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -46,9 +46,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 8
 
-#define QAPP_ORG_NAME "BitNodes"
-#define QAPP_ORG_DOMAIN "bitnodes.co"
-#define QAPP_APP_NAME_DEFAULT "BitNodes-Qt"
-#define QAPP_APP_NAME_TESTNET "BitNodes-Qt-testnet"
+#define QAPP_ORG_NAME "BitNodesPro"
+#define QAPP_ORG_DOMAIN "bitnodespro.co"
+#define QAPP_APP_NAME_DEFAULT "BitNodesPro-Qt"
+#define QAPP_APP_NAME_TESTNET "BitNodesPro-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

@@ -47,10 +47,10 @@ static bool AppInitRawTx(int argc, char* argv[])
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = _("BitNodes Core bitnodes-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("BitNodesPro Core bitnodespro-tx utility version") + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  bitnodes-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded bitnodes transaction") + "\n" +
-              "  bitnodes-tx [options] -create [commands]   " + _("Create hex-encoded bitnodes transaction") + "\n" +
+              "  bitnodespro-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded bitnodespro transaction") + "\n" +
+              "  bitnodespro-tx [options] -create [commands]   " + _("Create hex-encoded bitnodespro transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());
@@ -555,7 +555,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw runtime_error("too few parameters");
 
-            // param: hex-encoded bitnodes transaction
+            // param: hex-encoded bitnodespro transaction
             string strHexTx(argv[1]);
             if (strHexTx == "-")                 // "-" implies standard input
                 strHexTx = readStdin();

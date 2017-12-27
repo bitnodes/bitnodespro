@@ -7,7 +7,7 @@
 #define BITCOIN_COMPAT_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/bitnodes-config.h"
+#include "config/bitnodespro-config.h"
 #endif
 
 #ifdef WIN32
