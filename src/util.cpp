@@ -112,7 +112,7 @@ bool fLiteMode = false;
 bool fEnableInstantX = true;
 int nInstantXDepth = 5;
 int nDarksendRounds = 2;
-int nAnonymizeDarkcoinAmount = 1000;
+int nAnonymizeDarkcoinAmount = 100;
 int nLiquidityProvider = 0;
 
 int64_t enforceMasternodePaymentsTime = 4085657524;

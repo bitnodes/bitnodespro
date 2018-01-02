@@ -27,6 +27,8 @@
 #include "crypto/sph_echo.h"
 #include "crypto/sph_hamsi.h"
 #include "crypto/sph_fugue.h"
+#include "crypto/sph_shabal.h"
+#include "crypto/sph_whirlpool.h"
 
 #include <vector>
 
@@ -73,6 +75,8 @@ GLOBAL sph_simd512_context      z_simd;
 GLOBAL sph_echo512_context      z_echo;
 GLOBAL sph_hamsi512_context     z_hamsi;
 GLOBAL sph_fugue512_context     z_fugue;
+GLOBAL sph_shabal512_context    z_shabal;
+GLOBAL sph_whirlpool_context    z_whirlpool;
 
 #define fillz() do { \
     sph_blake512_init(&z_blake); \
@@ -88,6 +92,8 @@ GLOBAL sph_fugue512_context     z_fugue;
     sph_echo512_init(&z_echo); \
     sph_hamsi512_init(&z_hamsi); \
     sph_fugue512_init(&z_fugue); \
+    sph_shabal512_init(&z_shabal); \
+    sph_whirlpool_init(&z_whirlpool); \
 } while (0)
 
 #define ZBLAKE (memcpy(&ctx_blake, &z_blake, sizeof(z_blake)))
@@ -98,9 +104,12 @@ GLOBAL sph_fugue512_context     z_fugue;
 #define ZSKEIN (memcpy(&ctx_skein, &z_skein, sizeof(z_skein)))
 #define ZHAMSI (memcpy(&ctx_hamsi, &z_hamsi, sizeof(z_hamsi)))
 #define ZFUGUE (memcpy(&ctx_fugue, &z_fugue, sizeof(z_fugue)))
+#define ZSHABAL (memcpy(&ctx_shabal, &z_shabal, sizeof(z_shabal)))
+#define ZWHIRLPOOL (memcpy(&ctx_whirlpool, &z_whirlpool, sizeof(z_whirlpool)))
 
 /* ----------- Bitcoin Hash ------------------------------------------------- */
 /** A hasher class for Bitcoin's 160-bit hash (SHA-256 + RIPEMD-160). */
+
 class CHash160 {
 private:
     CSHA256 sha;
@@ -283,7 +292,7 @@ void BIP32Hash(const unsigned char chainCode[32], unsigned int nChild, unsigned 
 
 /* ----------- BitNodesPro Hash ------------------------------------------------ */
 template<typename T1>
-inline uint256 HashX13(const T1 pbegin, const T1 pend)
+inline uint256 HashX15(const T1 pbegin, const T1 pend)
 
 {
     sph_blake512_context     ctx_blake;
@@ -299,6 +308,9 @@ inline uint256 HashX13(const T1 pbegin, const T1 pend)
     sph_echo512_context      ctx_echo;
     sph_hamsi512_context     ctx_hamsi;
     sph_fugue512_context     ctx_fugue;
+    sph_shabal512_context    ctx_shabal;
+    sph_whirlpool_context    ctx_whirlpool;
+
     static unsigned char pblank[1];
 
     uint512 hash[17];
@@ -355,8 +367,15 @@ inline uint256 HashX13(const T1 pbegin, const T1 pend)
     sph_fugue512 (&ctx_fugue, static_cast<const void*>(&hash[11]), 64);
     sph_fugue512_close(&ctx_fugue, static_cast<void*>(&hash[12]));
 
+    sph_shabal512_init(&ctx_shabal);
+    sph_shabal512 (&ctx_shabal, static_cast<const void*>(&hash[12]), 64);
+    sph_shabal512_close(&ctx_shabal, static_cast<void*>(&hash[13]));
 
-    return hash[12].trim256();
+    sph_whirlpool_init(&ctx_whirlpool);
+    sph_whirlpool (&ctx_whirlpool, static_cast<const void*>(&hash[13]), 64);
+    sph_whirlpool_close(&ctx_whirlpool, static_cast<void*>(&hash[14]));
+
+    return hash[14].trim256();
 }
 
 #endif // BITCOIN_HASH_H

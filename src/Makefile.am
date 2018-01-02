@@ -249,8 +249,9 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/simd.c \
   crypto/skein.c \
   crypto/hamsi.c \
-  crypto/hamsi_helper.c \
   crypto/fugue.c \
+  crypto/shabal.c \
+  crypto/whirlpool.c \
   crypto/common.h \
   crypto/sha256.h \
   crypto/sha512.h \
@@ -272,7 +273,9 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sph_skein.h \
   crypto/sph_types.h \
   crypto/sph_hamsi.h \
-  crypto/sph_fugue.h
+  crypto/sph_fugue.h \
+  crypto/sph_shabal.h \
+  crypto/sph_whirlpool.h
 
 # univalue JSON library
 univalue_libbitcoin_univalue_a_SOURCES = \

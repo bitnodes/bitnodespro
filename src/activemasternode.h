@@ -32,7 +32,7 @@ private:
     /// Register any Masternode
     bool Register(CTxIn vin, CService service, CKey key, CPubKey pubKey, CKey keyMasternode, CPubKey pubKeyMasternode, std::string &errorMessage);
 
-    /// Get 1000NODE input that can be used for the Masternode
+    /// Get 10000 XNODE input that can be used for the Masternode
     bool GetMasterNodeVin(CTxIn& vin, CPubKey& pubkey, CKey& secretKey, std::string strTxHash, std::string strOutputIndex);
     bool GetVinFromOutput(COutput out, CTxIn& vin, CPubKey& pubkey, CKey& secretKey);
 
@@ -60,7 +60,7 @@ public:
     /// Register remote Masternode
     bool Register(std::string strService, std::string strKey, std::string strTxHash, std::string strOutputIndex, std::string& errorMessage);
 
-    /// Get 1000 XNODE input that can be used for the Masternode
+    /// Get 10000 XNODE input that can be used for the Masternode
     bool GetMasterNodeVin(CTxIn& vin, CPubKey& pubkey, CKey& secretKey);
     vector<COutput> SelectCoinsMasternode();
 

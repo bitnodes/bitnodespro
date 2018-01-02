@@ -7,7 +7,7 @@
 #include "masternodeconfig.h"
 
 //
-// Bootup the Masternode, look for a 1000XNODE input and register on the network
+// Bootup the Masternode, look for a 10000 XNODE input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {    
@@ -386,7 +386,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
     // Filter
     BOOST_FOREACH(const COutput& out, vCoins)
     {
-        if(out.tx->vout[out.i].nValue == 1000*COIN) { //exactly
+        if(out.tx->vout[out.i].nValue == 10000*COIN) { //exactly
             filteredCoins.push_back(out);
         }
     }

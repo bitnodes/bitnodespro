@@ -153,6 +153,8 @@ HEADERS += src/activemasternode.h \
            src/crypto/sph_types.h \
            src/crypto/sph_hamsi.h \
            src/crypto/sph_fugue.h \
+           src/crypto/sph_shabal.h \
+           src/crypto/sph_whirlpool.h \
            src/json/json_spirit.h \
            src/json/json_spirit_error_position.h \
            src/json/json_spirit_reader.h \
@@ -441,6 +443,8 @@ SOURCES += src/activemasternode.cpp \
            src/crypto/cubehash.c \
            src/crypto/echo.c \
            src/crypto/groestl.c \
+           src/crypto/shabal.c \
+           src/crypto/whirlpool.c \
            src/crypto/hmac_sha256.cpp \
            src/crypto/hmac_sha512.cpp \
            src/crypto/jh.c \
@@ -455,7 +459,6 @@ SOURCES += src/activemasternode.cpp \
            src/crypto/simd.c \
            src/crypto/skein.c \
            src/crypto/hamsi.c \
-           src/crypto/hamsi_helper.c \
            src/crypto/fugue.c \
            src/json/json_spirit_reader.cpp \
            src/json/json_spirit_value.cpp \

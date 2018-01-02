@@ -50,7 +50,7 @@ QString BitcoinUnits::id(int unit)
         case NODE: return QString("node");
         default: return QString("???");
     }
-
+}
 
 QString BitcoinUnits::name(int unit)
 {
