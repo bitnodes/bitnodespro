@@ -1539,11 +1539,9 @@ int64_t GetBlockValue(int nHeight, const CAmount& nFees)
     int64_t nSubsidy = 10000;
 
     if (nHeight == 0)  {
-        nSubsidy = nSubsidy*85;
-    } else if (nHeight <= 110) {
-        for(int i = 1; i <= nHeight; i += 1) nSubsidy -= nSubsidy*0.07;
+        nSubsidy = nSubsidy*100;
     } else {
-        nSubsidy = nSubsidy*0.00034;
+        nSubsidy = nSubsidy*0.0002;
     }
 
     nSubsidy *= COIN;
