@@ -6,12 +6,13 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/bitnodes
-src/bitnodesd
-src/bitnodes-cli
-src/bitnodes-tx
-src/test/test_bitnodes
-src/qt/test/test_bitnodes-qt
+*.dirstamp
+src/bitnodespro
+src/bitnodesprod
+src/bitnodespro-cli
+src/bitnodespro-tx
+src/test/test_bitnodespro
+src/qt/test/test_bitnodespro-qt
 
 # autoreconf
 Makefile.in
@@ -34,8 +35,8 @@ config.log
 config.status
 configure
 libtool
-src/config/bitnodes-config.h
-src/config/bitnodes-config.h.in
+src/config/bitnodespro-config.h
+src/config/bitnodespro-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -60,7 +61,7 @@ src/qt/test/moc*.cpp
 *.o
 *.o-*
 *.patch
-.bitnodes
+.bitnodespro
 *.a
 *.pb.cc
 *.pb.h
@@ -79,12 +80,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitnodes-qt
-BitNodes-Qt.app
+bitnodespro-qt
+BitNodesPro-Qt.app
 
 # Unit-tests
 Makefile.test
-bitnodes-qt_test
+bitnodespro-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -100,7 +101,7 @@ build
 #lcov
 *.gcno
 /*.info
-test_bitnodes.coverage/
+test_bitnodespro.coverage/
 total.coverage/
 coverage_percent.txt
 
