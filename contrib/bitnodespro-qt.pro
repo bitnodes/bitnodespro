@@ -151,10 +151,6 @@ HEADERS += src/activemasternode.h \
            src/crypto/sph_simd.h \
            src/crypto/sph_skein.h \
            src/crypto/sph_types.h \
-           src/crypto/sph_hamsi.h \
-           src/crypto/sph_fugue.h \
-           src/crypto/sph_shabal.h \
-           src/crypto/sph_whirlpool.h \
            src/json/json_spirit.h \
            src/json/json_spirit_error_position.h \
            src/json/json_spirit_reader.h \
